@@ -1,4 +1,4 @@
-User Management API
+#User Management API
 
 A RESTful User Management API built using Node.js and Express, focusing on correct HTTP semantics, clean API design, standardized error handling, and thorough request validation.
 
