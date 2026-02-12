@@ -1,0 +1,51 @@
+### Get all the users data
+GET http://localhost:3000/users
+
+### Get the user with id = 5 (doesn't exist)
+GET http://localhost:3000/users/5
+
+### Get the user with id = 1 (exists)
+GET http://localhost:3000/users/1
+
+
+### Create a new user (with missing parameters)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "id" : 3,
+    "name": "",
+    "email": "tom@gmail.com"
+}
+
+### Create a new user with valid parameters
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "id" : 3,
+    "name": "Tom",
+    "email": "tom@gmail.com"
+}
+
+### Updating user details of a non-existing user(returns error)
+PATCH  http://localhost:3000/users/10
+Content-Type: application/json
+
+{
+    "email": "th@gmail.com"
+}
+
+### Updating user details of an existing user
+PATCH  http://localhost:3000/users/1
+Content-Type: application/json
+
+{
+    "email": "th@gmail.com"
+}
+
+### Deleting user with id = 10 (doesn't exist)
+DELETE http://localhost:3000/users/10
+
+### Deleting user with id = 1
+DELETE http://localhost:3000/users/1
